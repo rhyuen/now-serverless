@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Now Tester</title>
+</head>
+
+<body>
+    <h1>Hi Human. Pizza's ready.</h1>
+    <section>
+        <h1>Server Result:</h1>
+        <p id="result"></p>
+    </section>
+    <section>
+        <h1>Serverless Result: </h1>
+        <p id="serverless"></p>
+    </section>
+    <script type="text/javascript">
+        const url = "/api/index.js";
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById("result").innerText = data.message;
+            }).catch(e => {
+                document.getElementById("result").value(e);
+                console.log(e);
+            });
+
+        const serverlessURL = "/api/lambda/functionone.js";
+        fetch(serverlessURL)
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                document.getElementById("serverless").innerText = data.message;
+            }).catch(e => {
+                document.getElementById("serverless").innerText = e;
+                console.log(e);
+            });
+    </script>
+</body>
+
+</html>

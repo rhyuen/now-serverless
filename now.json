@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "builds": [{
+            "src": "/api/lambda/*.js",
+            "use": "@now/node"
+        },
+        {
+            "src": "/api/index.js",
+            "use": "@now/node-server"
+        }, {
+            "src": "*.html",
+            "use": "@now/html-minifier"
+        }
+    ],
+    "routes": [{
+            "src": "/api/one",
+            "dest": "/api/lambda/functionone.js"
+        },
+        {
+            "src": "/api/two",
+            "dest": "/api/lambda/jwt.js"
+        },
+        {
+            "src": "/api/server",
+            "dest": "/api/index.js"
+        }
+    ],
+    "public": true
+}
