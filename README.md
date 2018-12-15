@@ -14,10 +14,16 @@
 2. I got promises working with NODE functions.
 3. I got functions to return a JWT.
 
+# ATTEMPTS/THINGS I COULDN'T get to work.
+1. I can't a DB connection to mongo working in `/api/lambda/dbconn.js`.
+2. I can't get subroutes (routes declared and used in the node app but not explicitly denoted and assigned a rule in `now.json`) to node.js apps with `@now/node-server`.
+
 # Questions to be answered.
 
 1. I don't know if the `node_modules` have to be in the same directory as the `functions` or if the `node_modules` directory can be at the root level.
+> `node_modules` can be at the root level
 
 2. You can return JSON responses with `res.end(JSON.stringify({'key': 'value', 'keytwo': 'valuetwo'}))`.
+> `This is fine`
 
 3. I do not know if `@now/node-server` lets you deploy without error if there is an explicit port named in the server code.  Currently, there is no explicit port denoted.
