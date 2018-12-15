@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "env": {
+        "db": "@nowserverlessprod"
+    },
     "builds": [{
             "src": "/api/lambda/*.js",
             "use": "@now/node"
@@ -21,7 +24,7 @@
             "dest": "/api/lambda/jwt.js"
         },
         {
-            "src": "/api/server",
+            "src": "/api/server/.*",
             "dest": "/api/index.js"
         }
     ],
