@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "alias": [
+        "royufaas"
+    ],
     "env": {
         "db": "@nowserverlessprod"
     },
@@ -24,7 +27,7 @@
             "dest": "/api/lambda/jwt.js"
         },
         {
-            "src": "/api/server/.*",
+            "src": "^/api/server/.*",
             "dest": "/api/index.js"
         }
     ],

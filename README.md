@@ -13,6 +13,10 @@
 1. I got the Routing to work with the NODE functions.
 2. I got promises working with NODE functions.
 3. I got functions to return a JWT.
+4. Local Files can be read.  Example in `/api/lambda/files.js` and `sample.txt`.
+5. Async/await works as shown in `/api/lambda/promise.js`.
+
+6. Relative File Paths don't seem to work.
 
 # ATTEMPTS/THINGS I COULDN'T get to work.
 1. I can't a DB connection to mongo working in `/api/lambda/dbconn.js`.
